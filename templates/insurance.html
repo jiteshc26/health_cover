@@ -1,0 +1,28 @@
+<html>
+    <head>
+    <title>Health Cover Calculator</title>     
+    </head>
+    <body>
+        <div style="background-color: #9abeba;">
+        <h1>Health Cover Calculator</h1>    
+        <form action="/predict" method="post">
+           <label>AGE: </label> <input type="number" name="html_age"><br><br>
+           
+           <label>SEX: </label> <select name="html_sex">
+                <option value="male">MALE</option>
+                <option value="female">FEMALE</option>
+                </select>
+                <br><br>
+           <label>BMI: </label> <input type="float" name="html_bmi"><br><br>
+           <label>NUMBER OF CHILDRENS: </label> <input type="number" name="html_childs"><br><br> 
+           <label>SMOKER: </label> <select name="html_smoke">
+            <option value="yes">YES</option>
+            <option value="no">NO</option>
+            </select>
+            <br><br>  
+           <input type="SUBMIT" value="CHECK HEALTH COVER">
+           <br><br>
+        </form>
+        </div>
+    </body>
+</html>
