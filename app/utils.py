@@ -1,18 +1,18 @@
 import pickle
 import json
 import numpy as np
-
+import CONFIG
 class prediction():
     def __init__(self):
         pass
         
     def load_raw(self):
 
-        with open("artifacts\insurance.pkl","rb") as model_file:
+        with open(CONFIG.MODEL_PATH,"rb") as model_file:
             self.model=pickle.load(model_file)
-        with open('artifacts\columns_names.json','r') as col_file: 
+        with open(CONFIG.COLUMN_PATH,"r") as col_file: 
             self.column_names = json.load(col_file)
-        with open('artifacts\encoded_data.json','r') as encode_file:
+        with open(CONFIG.ENCODED_PATH,"r") as encode_file:
             self.encoded_data = json.load(encode_file)
 
     def predict_cover(self,data):
